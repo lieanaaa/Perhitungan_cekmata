@@ -36,3 +36,15 @@ void tambahCekMata(const std::string &namaPasien, int usia, double tinggiBadan, 
     std::cout << "Cek mata berhasil untuk " << namaPasien << " dengan status kesehatan mata: " << statusKesehatanMata << std::endl;
 }
 
+void tampilkanHasilCekMata() {
+    std::cout << "Daftar hasil cek mata:" << std::endl;
+    for (const auto &cekMata : daftarCekMata) {
+        std::cout << "Nama Pasien: " << cekMata.namaPasien
+                  << ", Usia: " << cekMata.usia
+                  << ", Tinggi Badan: " << cekMata.tinggiBadan
+                  << ", Jarak Pandang: " << cekMata.jarakPandang
+                  << ", Hasil Tes Mata: " << cekMata.hasilTesMata
+                  << ", Status Kesehatan Mata: " << cekMata.statusKesehatanMata << std::endl;
+    }
+}
+
