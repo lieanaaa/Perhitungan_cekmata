@@ -16,8 +16,8 @@ std::vector<CekMata> daftarCekMata;
 void tambahCekMata(const std::string &namaPasien, int usia, double tinggiBadan, double jarakPandang, int hasilTesMata) {
     std::string statusKesehatanMata;
     
-    if (usia <= 5) {
-        std::cout << "Pemeriksaan ini hanya untuk pasien di atas 5 tahun." << std::endl;
+    if (usia <= 7) {
+        std::cout << "Pemeriksaan ini hanya untuk pasien di atas 7 tahun." << std::endl;
         return;
     }
     
