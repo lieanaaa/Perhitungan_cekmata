@@ -48,3 +48,39 @@ void tampilkanHasilCekMata() {
     }
 }
 
+int main() {
+    int pilihan;
+    do {
+        std::cout << "Menu:\n1. Periksa Cek Mata\n2. Tampilkan Hasil Cek Mata\n3. Keluar\nPilih opsi: ";
+        std::cin >> pilihan;
+        switch (pilihan) {
+            case 1: {
+                std::string namaPasien;
+                int usia, hasilTesMata;
+                double tinggiBadan, jarakPandang;
+                std::cout << "Masukkan Nama Pasien: ";
+                std::cin >> namaPasien;
+                std::cout << "Masukkan Usia: ";
+                std::cin >> usia;
+                std::cout << "Masukkan Tinggi Badan (cm): ";
+                std::cin >> tinggiBadan;
+                std::cout << "Masukkan Jarak Pandang (meter): ";
+                std::cin >> jarakPandang;
+                std::cout << "Masukkan Hasil Tes Mata (skala 1-10): ";
+                std::cin >> hasilTesMata;
+                tambahCekMata(namaPasien, usia, tinggiBadan, jarakPandang, hasilTesMata);
+                break;
+            }
+            case 2:
+                tampilkanHasilCekMata();
+                break;
+            case 3:
+                std::cout << "Keluar dari program." << std::endl;
+                break;
+            default:
+                std::cout << "Pilihan tidak valid, silakan coba lagi." << std::endl;
+        }
+    } while (pilihan != 3);
+    
+    return 0;
+}
